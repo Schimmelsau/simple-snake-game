@@ -18,6 +18,9 @@
     <h1>Simple Snake-game</h1>
 
     <h2><canvas  id="canvas" width="480" height="480"></canvas></h2>
+
+    <button class="startButton" onclick="draw()">Start</button>
+    <button class="stopButton" onclick="stop()">Stop</button>
     
 
     <script>
@@ -40,7 +43,7 @@
         placeFood();
         setInterval(gameLoop, 200);
         document.addEventListener('keydown', keyDown);
-        draw();
+        
 
         function draw() {
             ctx.fillStyle = 'Grey';
@@ -55,7 +58,12 @@
             add(food.x, food.y); // place food
 
             requestAnimationFrame(draw);
+            
 
+        }
+
+        function stop() {
+            window.location.href = "https://youtu.be/HJLKPy7QQQg";
         }
 
         function placeFood() {
